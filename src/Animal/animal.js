@@ -7,7 +7,6 @@ const Animal = (props) => {
         <td>{props.greetings} {props.name}</td>
         <td><input type="text" onChange={props.changed}/></td>
         </tr>
-
         );
 }
 
