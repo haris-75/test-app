@@ -1,7 +1,13 @@
 import React from 'react';
 
-const Animal = () => {
-    return <p>Hello I`am an Animal</p>
+const Animal = (props) => {
+    return (
+        <tr>
+        <th>{props.specie}</th>
+        <td>{props.greetings} {props.name}</td>
+        </tr>
+
+        );
 }
 
 export default Animal;

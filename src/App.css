@@ -1,3 +1,13 @@
 .App {
   text-align: center;
+  align-content: center;
+  display: inline-block;
+}
+.App .table101{
+  padding: 20px;
+  align-self: center;
+}
+
+.App .table101 td,th{
+  border: 1px solid black;
 }
