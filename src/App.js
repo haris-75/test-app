@@ -1,21 +1,20 @@
-import React, { useState } from 'react';
+import React, { Component } from 'react';
 import './App.css';
 import Animal from './Animal/Animal.js'
 
-const app = props =>  {
+class App extends Component  {
 
-  const[stateProp, setState] =
-  useState({
+  state={
     Animals: [
       {specie: 'Mammals', name:'Lion', greetings:'Hello I am a'},
       {specie: 'Birds', name:'Eagle', greetings:'Hi Guys I am an'},
       {specie: 'Reptiles', name:'Turtle', greetings:'Hey Fellas I am'}
     ],
     otherstate: {value: 'someValue'}
-  });
+  }
   
-  const switchSpecieHandler = () =>{
-    setState({
+  switchSpecieHandler = () =>{
+    this.setState({
       Animals: [
         {specie: 'Birds', name:'Lion', greetings:'Hello I am a'},
         {specie: 'Reptiles', name:'Eagle', greetings:'Hi Guys I am an'},
@@ -23,7 +22,7 @@ const app = props =>  {
       ]
     })
   }
-  
+  render() {
     return (
       <div className="App">
         
@@ -31,17 +30,18 @@ const app = props =>  {
 
         <table className="table101">
         <tbody>
-        {stateProp.Animals.map((animal)=>(
+        {this.state.Animals.map((animal)=>(
           <Animal specie={animal.specie} greetings={animal.greetings} name={animal.name}/>
         ))}
         </tbody>
         </table>
 
-        <button onClick={switchSpecieHandler}>Switch Species</button>
+        <button onClick={this.switchSpecieHandler}>Switch Species</button>
 
       </div>
     );
     //return React.createElement('div',{className: "App"},React.createElement('h1',null,'Me hou react ke app'));
+  }
 }
 
-export default app;
+export default App;
