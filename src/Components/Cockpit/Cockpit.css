@@ -1,0 +1,28 @@
+  
+  .button_simple {
+    border: 1px solid blue;
+    padding: 16px;
+    background-color: green;
+    font: inherit;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .button_simple:hover {
+    background-color: lightgreen;
+    color: black;
+  }
+  
+  .button_click {   
+    border: 1px solid burlywood;
+    padding: 16px;
+    background-color:brown;
+    font: inherit;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .button_click:hover {
+    background-color: salmon;
+    color: black;
+  }
